@@ -1,1 +1,2 @@
 # demo-java
+echo "test"
