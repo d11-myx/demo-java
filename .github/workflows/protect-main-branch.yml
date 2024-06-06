@@ -1,0 +1,15 @@
+name: Protect Main Branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prevent push to main
+        run: |
+          echo "Pushing to the main branch is not allowed."
+          exit 1
