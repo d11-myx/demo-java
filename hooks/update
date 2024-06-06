@@ -1,0 +1,10 @@
+#!/bin/sh
+
+refname="$1"
+newrev="$2"
+oldrev="$3"
+
+if [ "$refname" = "refs/heads/main" ]; then
+  echo "Direct pushes to the main branch are not allowed. Please use a pull request."
+  exit 1
+fi
